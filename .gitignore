@@ -1,5 +1,8 @@
+# Excluir la carpeta target (archivos de compilación)
 target/
+# No excluir los archivos del wrapper de Maven
 !.mvn/wrapper/maven-wrapper.jar
+# No excluir las carpetas target dentro de src/main y src/test
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -36,3 +39,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Asegúrate de que la carpeta src/test no sea ignorada
+!src/test/
