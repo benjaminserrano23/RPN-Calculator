@@ -3,10 +3,10 @@ package org.example;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
-
+    //Test de una expresion compleja válida 
     @Test
     void testRPNExpression() {
-        String input = "3 4 + 2 * 7 /"; //simulates user input
+        String input = "3 4 + 2 * 7 /"; //simulates user inputs
         ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -16,6 +16,7 @@ class MainTest {
         
         assertTrue(output.contains("Result: 2.0")); //check if the output contains the expected result
     }
+    //Test de una expresion inválida, falta un operador
     @Test
     void testInvalidRPNExpression() {
         String input = "3 4 + 2 * 7 / 5"; //simulates user input
@@ -28,6 +29,7 @@ class MainTest {
         
         assertTrue(output.contains("Invalid RPN expression")); //check if the output contains the expected error message
     }
+    //Test de input inválido
     @Test
     void testInvalidInput() {
         String input = "3 4 + a"; //simulates user input
@@ -40,6 +42,7 @@ class MainTest {
         
         assertTrue(output.contains("Invalid input")); //check if the output contains the expected error message
     }
+    //Test division por cero
     @Test
     void testDivisionByZero() {
         String input = "6 0 /"; //simulates user input

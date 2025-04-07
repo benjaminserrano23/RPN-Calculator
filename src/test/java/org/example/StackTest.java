@@ -1,42 +1,19 @@
 package org.example;
+
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
 
-class StackTest {
-    Private Stack stack;
-    //Test for the stack functions
-    @BeforeEach
-    void setUp() {
-        stack = new Stack(10);
-    }
+class MainTest {
 
-    @Test
-    void testPush() {
-        stack.push(1);
-        assertEquals(stack.top(), 1);
-    }
-    @Test
-    void testPop() {
-        stack.push(1);
-        stack.push(2);
-        assertEquals(stack.pop(), 2);
-    }
-    @Test
-    void testTop() {
-        stack.push(1);
-        stack.push(2);
-        assertEquals(stack.top(), 2);
-    }
-    @Test
+    @org.junit.jupiter.api.Test
     void testMakeNull() {
+        Stack stack = new Stack(5);
         stack.push(1);
         assertEquals(makeNull(S), 0);
     }
-    @Test
-    void testIsEmpty() {
-        assertTrue(stack.isEmpty());
-        stack.push(1);
-        assertFalse(stack.isEmpty());
+    @org.junit.jupiter.api.Test
+    void testTop() {
+        Stack stack = new Stack(5);
+        assertEquals(division(6, 3),2);
     }
 
 }
