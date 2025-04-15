@@ -18,7 +18,7 @@ class MainTest {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
         Main.main(new String[0]);
-        String output = out.toString()
+        String output = out.toString();
         
         assertTrue(output.contains("Result: 2.0")); //check if the output contains the expected result
     }
