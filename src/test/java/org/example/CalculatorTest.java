@@ -17,7 +17,7 @@ class CalculatorTest {
     }
     @Test
     void testSubstraction() {
-        assertEquals(2, calculator.evaluate("3 1 -")); 
+        assertEquals(9, calculator.evaluate("17 1 - 3 - 4 -")); 
     }
     @Test
     void testMultiplication() {

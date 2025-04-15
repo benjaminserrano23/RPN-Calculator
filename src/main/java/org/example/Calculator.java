@@ -20,7 +20,7 @@ public class Calculator {
 
                 switch (token) {
                     case "+" -> result = a + b;
-                    default -> throw new RuntimeException("Operador inválido");
+                    case "-" -> result = a - b;
                 }
                 stack.push(result);
             }
