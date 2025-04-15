@@ -1,5 +1,6 @@
 package org.example;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,7 @@ class CalculatorTest {
     //Test for the calculator functions
     @Test
     void testAdd() {    
-        assertEquals(5, calculator.evaluate("2 3 +"));
+        assertEquals(11, calculator.evaluate("2 3 + 4 + 2 +"));
     }
     @Test
     void testSubstraction() {
@@ -24,7 +25,7 @@ class CalculatorTest {
     }
     @Test
     void testDivision() {
-        assertEquals(2, calculator.evaluate("6 2 /"));
+        assertEquals(3, calculator.evaluate("6 2 /"));
     }
     @Test
     void testDivisionByZero() {
