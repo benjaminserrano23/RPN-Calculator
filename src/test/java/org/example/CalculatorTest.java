@@ -21,7 +21,7 @@ class CalculatorTest {
     }
     @Test
     void testMultiplication() {
-        assertEquals(6, calculator.evaluate("2 3 *"));
+        assertEquals(48, calculator.evaluate("2 3 * 4 * 2 *"));
     }
     @Test
     void testDivision() {

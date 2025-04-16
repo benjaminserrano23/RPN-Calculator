@@ -21,6 +21,7 @@ public class Calculator {
                 switch (token) {
                     case "+" -> result = a + b;
                     case "-" -> result = a - b;
+                    case "*" -> result = a * b;
                 }
                 stack.push(result);
             }
