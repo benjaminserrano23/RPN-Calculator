@@ -22,6 +22,11 @@ public class Calculator {
                     case "+" -> result = a + b;
                     case "-" -> result = a - b;
                     case "*" -> result = a * b;
+                    case "/" -> {
+                        if (b == 0) throw new ArithmeticException("División por cero");
+                        result = a / b;
+                    }
+                    default -> throw new RuntimeException("Operador inválido");
                 }
                 stack.push(result);
             }
