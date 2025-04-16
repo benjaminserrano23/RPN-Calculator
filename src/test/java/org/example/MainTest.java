@@ -32,8 +32,7 @@ class MainTest {
         System.setOut(new PrintStream(out)); 
         Main.main(new String[0]); //call the main method of the Main class
         String output = out.toString();
-        
-        assertTrue(output.contains("Invalid RPN expression")); //check if the output contains the expected error message
+        assertTrue(output.contains("Expresión inválida")); //check if the output contains the expected error message
     }
     //Test de input inválido (carácter extraño)
     @Test
@@ -46,7 +45,7 @@ class MainTest {
         Main.main(new String[0]);
         String output = out.toString(); 
         
-        assertTrue(output.contains("Invalid input")); //check if the output contains the expected error message
+        assertTrue(output.contains("Input inválido")); //check if the output contains the expected error message
     }
     //Test división por cero
     @Test
