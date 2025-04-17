@@ -37,14 +37,15 @@ class MainTest {
     //Test de input inválido (carácter extraño)
     @Test
     void testInvalidInput() {
-        String input = "3 4 + a"; //simulates user input
+        String input = "3 4 &"; //simulates user input
         ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
         Main.main(new String[0]);
-        String output = out.toString(); 
-        
+        String output = out.toString();
+        System.out.println(output); // para debug
+
         assertTrue(output.contains("Input inválido")); //check if the output contains the expected error message
     }
     //Test división por cero

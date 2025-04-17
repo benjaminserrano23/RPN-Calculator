@@ -26,7 +26,10 @@ public class Calculator {
                         if (b == 0) throw new ArithmeticException("División por cero");
                         result = a / b;
                     }
-                    default -> throw new RuntimeException("Invalid input");
+                    default -> {
+                        System.out.println("DEBUG: token inválido -> " + token);
+                        throw new RuntimeException("Invalid input");
+                    }
                 }
                 stack.push(result);
             }

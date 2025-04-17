@@ -1,7 +1,7 @@
 package org.example;
 
 public class Stack{
-    private double [] elements;
+    private final double [] elements;
     private int top;
 
     public Stack(int capacity) {    
